@@ -1,0 +1,287 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+
+body {
+	overflow: hidden;
+}
+
+main {
+	display: flex;
+	width: 100%;
+	height: 92vh;
+}
+
+/* Navbar */
+nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0px 20px;
+	height: 8vh;
+	background: #26272c;
+	color: #fff;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.profile img {
+	width: 50px;
+}
+
+/* GroupMain */
+.group-main {
+	width: 280px;
+	background: #242426;
+	position: relative;
+}
+
+/* GroupList */
+.group-list {
+	width: 280px;
+	background: #242426;
+	position: relative;
+}
+
+li {
+	list-style-type: none;
+}
+
+/* Group */
+.group {
+	position: relative;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.group:hover {
+	background: #ffffff10;
+}
+
+/* GroupInput */
+.group-input {
+	padding: 20px;
+	background: #1a1b1c;
+	border: none;
+	width: 90%;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 2vh;
+	position: absolute;
+}
+
+/* TodoMain */
+.todo-main {
+	background: #1a1b1c;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0 50px;
+}
+
+.wrapper {
+	/* border: thin solid red; */
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+
+/* TodoGroupName */
+.todo-group-name {
+	/* border: thin solid white; */
+	padding: 20px 0px;
+	font-weight: 800;
+	font-size: 1.5em;
+	color: #7689da;
+}
+
+/* TodoList */
+.todo-list {
+	/* border: thin solid white; */
+	width: 100%;
+	max-height: 80%;
+	overflow-y: scroll;
+}
+
+.todo-list::-webkit-scrollbar {
+	background: black;
+	width: 10px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+	background: #fff;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+/* TodoInput */
+.todo-input {
+	width: 100%;
+	padding: 20px;
+	background: #242426;
+	border: none;
+	position: absolute;
+	bottom: 2vh;
+}
+
+/* Todo */
+.todo {
+	position: relative;
+	padding: 20px;
+	background: #242426;
+	color: #fff;
+	border-radius: 5px;
+	width: 100%;
+	margin: 5px 0px;
+
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.todo:hover {
+	background: #ffffff10;
+}
+
+.todo .checkbox-container {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 25px;
+	cursor: pointer;
+}
+
+.todo input {
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+
+	opacity: 0;
+	z-index: 10;
+}
+
+.todo .checkbox-custom {
+	height: 18px;
+	width: 18px;
+	border: 2px solid #fff;
+	background: transparent;
+	border-radius: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.todo .checkbox-custom.checked {
+	background: #fff;
+}
+
+.delete-task-btn {
+	position: absolute;
+	right: 20px;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+
+/* Group Highlight */
+.group.highlight {
+	background: #7689da10;
+}
+
+.group.highlight .group-name {
+	color: #7689da;
+	font-weight: bold;
+}
+
+/* Context Menu */
+.context-menu-group,
+.context-menu-todo {
+	border: 1px solid #555555;
+	border-radius: 5px;
+	position: fixed;
+	z-index: 1000;
+	width: 150px;
+	background: #212121;
+
+	transform: scale(0);
+	transform-origin: top left;
+}
+
+.context-menu-group.active,
+.context-menu-todo.active {
+	transform: scale(1);
+	transition: transform .2s ease-in-out;
+}
+
+.context-menu-group .item,
+.context-menu-todo .item {
+	padding: 12px 18px;
+	font-size: 15px;
+	color: #eee;
+	display: flex;
+	align-items: center;
+}
+
+.context-menu-group .item:hover,
+.context-menu-todo .item:hover {
+	background: #7689da10;
+	cursor: pointer;
+}
+
+.item.item-delete {
+	color: #d54949;
+}
+
+.icon.icon-delete {
+	transform: translateY(2px);
+}
+
+.context-menu-group .item .icon,
+.context-menu-todo .item .icon {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+/* Rename Group */
+.group-wrapper,
+.todo-wrapper {
+	position: relative;
+}
+
+.group-rename,
+.todo-rename {
+	background: transparent;
+	border: 2px solid #aaa;
+	padding: 5px;
+	z-index: 1000;
+	display: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 15px;
+}
+
+.todo-rename {
+	/* display: block; */
+	margin-left: 50px;
+}

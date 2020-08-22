@@ -1,0 +1,25 @@
+Navbar:
+    Title
+    Search icon
+    Preferences
+    Profile
+    Draw
+
+Sidebar: 
+    Drawing Palette
+    Tools
+    Canvas will take over gallery
+
+Image:
+    comment
+    like
+    share
+    full-screen feature
+
+Drawing API
+
+Upload Image (+) bottom right:
+    does not exceed 3 images per row
+
+Responsive Design:
+    Column when mobile

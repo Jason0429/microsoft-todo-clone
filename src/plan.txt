@@ -1,0 +1,11 @@
+Be able to create a new list
+    Name
+    Num of tasks
+
+Be able to create new task in that list
+    Name
+    Complete Status
+
+Display Group Name in Main-Tasks when clicked
+
+When Task is clicked, display more-info-panel on right
